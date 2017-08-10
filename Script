@@ -1,0 +1,30 @@
+respostas = []
+
+r1=input("Telefonou para a vitima? (S/N): ").upper()
+r2=input("Esteve no local do crime? (S/N): ").upper()
+r3=input("Mora perto da vitima? (S/N): ").upper()
+r4=input("Devia para a vitima? (S/N): ").upper()
+r5=input("Ja trabalhou com a vitima? (S/N): ").upper()
+
+respostas = [r1, r2, r3, r4, r5]
+
+'''
+lr = [r1, r2, r3, r4, r5]
+resposta.extend(lr)
+respostas.append(r1)
+respostas.append(r2)
+respostas.append(r3)
+respostas.append(r4)
+respostas.append(r5)
+'''
+
+sim = respostas.count("S")
+
+if (sim == 2):
+    print("Suspeito")
+elif (sim == 3 or sim == 4):
+    print("Cumplice")
+elif (sim == 5):
+    print("Assassino")
+else:
+    print("Inocente")
